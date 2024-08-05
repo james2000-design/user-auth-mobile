@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_KEY = "AIzaSyACGGTrKCAq0Imp727NWgxIqM_cZWLROoc";
+const API_KEY = process.env.EXPO_PUBLIC_API_KEY;
 
 async function authenticate(mode: string, email: any, password: any) {
   const url = `https://identitytoolkit.googleapis.com/v1/accounts:${mode}?key=${API_KEY}`;
